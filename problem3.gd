@@ -1,4 +1,5 @@
 extends SceneTree
+const FIBO_LIMIT = 4000000
 
 func _init():
     var start = Time.get_unix_time_from_system()
@@ -16,7 +17,7 @@ func get_Sum_of_Even_fib() -> int:
     var second = 2
     var total = second
 
-    while second < 4000000:
+    while second < FIBO_LIMIT:
         var new = first + second
         if new & 1 == 0: #condition for even
             total += new
