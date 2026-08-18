@@ -2,7 +2,7 @@ extends SceneTree
 
 const MAX = 20
 var primeArray = [2,3,5,7,11,13,17,19]
-var nonPrimeArray = [1,4,6,8,9,10,12,14,15,16,18,20]
+var nonPrimeArray = [1,4,6,8,9,10,12,14,15,16,18,20] #honestly no reason for this
 
 func _init():
     var start = Time.get_unix_time_from_system()
