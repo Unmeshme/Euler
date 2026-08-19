@@ -1,9 +1,6 @@
 extends SceneTree
 
 const LIMIT = 100
-
-
-
 func _init():
     var start = Time.get_unix_time_from_system()
     var solution = main() #idk the calling convention
