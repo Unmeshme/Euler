@@ -9,19 +9,21 @@ func _init():
     print("Solution: %s, duration: %.5f " %[solution, duration])
     quit()
 
+
 func main() -> int:
     return get_Sum_of_Even_fib()
 
+
 func get_Sum_of_Even_fib() -> int:
-    var first = 1
-    var second = 2
-    var total = second
+    var m_first = 1
+    var m_second = 2
+    var m_total = m_second
 
-    while second < FIBO_LIMIT:
-        var new = first + second
-        if new & 1 == 0: #condition for even
-            total += new
-        first = second
-        second = new
+    while m_second < FIBO_LIMIT:
+        var m_new = m_first + m_second
+        if m_new & 1 == 0: #condition for even
+            m_total += m_new
+        m_first = m_second
+        m_second = m_new
 
-    return total
+    return m_total

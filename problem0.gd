@@ -8,9 +8,10 @@ func _init() :
     quit()
 
 
-func main(lim: int) -> int:
-    return Sum(lim)
+func main(p_lim: int) -> int:
+    return Sum(p_lim)
 
-func Sum(lim: int) -> int:
-    return (4*lim*lim*lim - lim) / 3
+
+func Sum(p_lim: int) -> int:
+    return (4*p_lim*p_lim*p_lim - p_lim) / 3
 

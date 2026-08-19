@@ -1,4 +1,4 @@
-#finding the largest prime factor of any number
+#finding the m_largest prime factor of any p_number
 
 extends SceneTree
 
@@ -11,53 +11,54 @@ func _init():
     quit()
 
 
-func main(number: int)->int:
-    return get_largest_prime_factor(number)
+func main(p_number: int)->int:
+    return get_largest_prime_factor(p_number)
 
 
-func get_largest_prime_factor(number: int) ->int :
-    var current = 3
-    var largest = 3
+func get_largest_prime_factor(p_number: int) ->int :
+    var m_current = 3
+    var m_largest = 3
 
-    var found = false
-    while !found:
-        if number % current == 0:
-            #divisible by the current prime
-            largest = current
-            number /= current
-            if number < current:
-                found = true
+    var m_found = false
+    while !m_found:
+        if p_number % m_current == 0:
+            #divisible by the m_current prime
+            m_largest = m_current
+            p_number /= m_current
+            if p_number < m_current:
+                m_found = true
         else:
-            current = get_next_prime(current)
+            m_current = get_next_prime(m_current)
     
-    return largest
+    return m_largest
 
-func is_prime(c: int)->bool:
-    if c <= 1:
+
+func is_prime(p_c: int)->bool:
+    if p_c <= 1:
         return false
-    if c <=3:
+    if p_c <=3:
         return true
-    if c % 2 == 0 || c % 3 == 0:
+    if p_c % 2 == 0 || p_c % 3 == 0:
         return false
     
-    var i = 5
-    while i * i <= c:
-        if c % i == 0 || c % (i+2) == 0:
+    var m_i = 5
+    while m_i * m_i <= p_c:
+        if p_c % m_i == 0 || p_c % (m_i+2) == 0:
             return false
-        i += 6
+        m_i += 6
     return true
 
 
-func get_next_prime(c: int)-> int:
-    if c < 2:
+func get_next_prime(p_c: int)-> int:
+    if p_c < 2:
         return 2
-    var can = c + 2
+    var m_can = p_c + 2
 
     while true:
-        if is_prime(can):
-            return can
-        can += 2
+        if is_prime(m_can):
+            return m_can
+        m_can += 2
     #return statement because godot was complaining
-    return can
+    return m_can
     
 

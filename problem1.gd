@@ -8,12 +8,13 @@ func _init():
     print("Solution: %s, Duration: %.5f " %[solution, total_time])
     quit()
 
-func main(lim: int) -> int:
-    return Multiple(lim)
+func main(p_lim: int) -> int:
+    return Multiple(p_lim)
 
-func Multiple(lim: int) -> int:
-    var total = 0
-    for i in range(3, lim):
+
+func Multiple(p_lim: int) -> int:
+    var m_total = 0
+    for i in range(3, p_lim):
         if i % 3 == 0 || i % 5 == 0:
-            total += i
-    return total
+            m_total += i
+    return m_total

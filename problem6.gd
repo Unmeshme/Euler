@@ -9,12 +9,13 @@ func _init():
     print("Solution: %s, duration: %.5f " %[solution, duration])
     quit()
 
+
 func main()->int:
     return get_difference()
 
 
 func get_difference()->int:
-    var sum_of_squares = ((LIMIT) * (LIMIT + 1) * (2 * LIMIT + 1))/ 6
-    var sum_n = (LIMIT * (LIMIT + 1)) / 2
+    var m_sum_of_squares = ((LIMIT) * (LIMIT + 1) * (2 * LIMIT + 1))/ 6
+    var m_sum_n = (LIMIT * (LIMIT + 1)) / 2
 
-    return sum_n * sum_n - sum_of_squares
+    return m_sum_n * m_sum_n - m_sum_of_squares
