@@ -1,0 +1,17 @@
+# Windows, Mac, and Linux system files
+.DS_Store
+Thumbs.db
+
+# VS Code specific directories and files
+.vscode/
+# Alternative: If you want to commit shared team settings but ignore user-specific states:
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+# !.vscode/snippets/
+
+# Local history extensions/logs
+.history/
+*.log
