@@ -15,3 +15,5 @@ Thumbs.db
 # Local history extensions/logs
 .history/
 *.log
+a.out
+*.out
