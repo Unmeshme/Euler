@@ -45,8 +45,8 @@ func calc_tau(p_num: int) -> int:
 	while m_factor * m_factor <= p_num:
 		var m_exponent: int = 0
 
-		while p_num % factor == 0:
-			p_num /= factor
+		while p_num % m_factor == 0:
+			p_num /= m_factor
 			m_exponent += 1
 
 		if m_exponent > 0:
